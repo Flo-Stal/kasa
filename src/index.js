@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import "./styles/main.scss";
+import "./styles/main.scss"; //importe le fichier main.scss qui contient les styles principaux de l'application
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
