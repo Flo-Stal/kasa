@@ -1,0 +1,110 @@
+.accommodationLocation {
+    margin-top: 30px;
+    color: #ff6060;
+    .allAccommodationTitle {
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width: 700px) {
+        flex-direction: column;
+        }
+        .accommodationName {
+        margin-bottom: 20px;
+        h1 {
+            font-size: 28px;
+            margin-right: 15px;
+            @media screen and (max-width: 700px) {
+            font-size: 20px;
+            }
+        }
+        h2 {
+            font-size: 18px;
+            @media screen and (max-width: 700px) {
+            font-size: 14px;
+            }
+        }
+
+        .tagsAndNotation {
+            display: flex;
+            color: white;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            ul {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+
+            li {
+                border-radius: 10px;
+                background: #ff6060;
+                margin-right: 5px;
+                padding: 5px 30px;
+                @media screen and (max-width: 700px) {
+                    border-radius: 5px;
+                    margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+        }
+        .allAccommodationHost {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-around;
+        @media screen and (max-width: 700px) {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .accommodationHost {
+            display: flex;
+            p {
+            width: min-content;
+            margin-right: 10px;
+            text-align: end;
+            font-size: 18px;
+            @media screen and (max-width: 700px) {
+                font-size: 14px;
+            }
+            }
+            img {
+            border-radius: 100px;
+            width: 64px;
+            height: 64px;
+            object-fit: cover;
+            @media screen and (max-width: 700px) {
+                height: 42px;
+                width: 42px;
+            }
+            }
+        }
+        @media screen and (min-width: 700px) and (max-width: 992px) {
+            .starsRating img {
+            height: 22px;
+            width: 22px;
+            }
+        }
+        @media screen and (max-width: 700px) {
+            .starsRating img {
+            height: 20px;
+            width: 20px;
+            }
+        }
+        }
+    }
+}
+
+    .collapseAccommodationPage {
+    display: flex;
+    gap: 50px;
+    width: 100%;
+    @media screen and (max-width: 700px) {
+        flex-direction: column;
+        gap: 0;
+        .arrowCollapse {
+        width: 15px;
+        }
+    }
+}

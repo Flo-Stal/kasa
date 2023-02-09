@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../components/Header";
 import Banner from "../components/Banner";
 import BannerImg from "../assets/IMG.jpg";
 import accommodationsList from "../datas/accommodationList.json"; 
@@ -7,6 +6,7 @@ import accommodationsList from "../datas/accommodationList.json";
 import Card from "../components/Card";
 import { useEffect, useState } from "react";
 //importe les fonctions useEffect et useState pour pouvoir utiliser le state
+
 
 const Home = () => {
     const [accommodations, setAccommodations] = useState([]);
@@ -18,7 +18,6 @@ const Home = () => {
     // utilise useEffect pour mettre à jour le state lorsque le composant Home est appelé
     return (
     <div>
-        <Header />
         <Banner
         BannerImg={BannerImg}
         BannerTitle="Chez vous, partout et ailleurs"
@@ -26,7 +25,7 @@ const Home = () => {
         <main>
         <div className="wrapper card">
             {accommodations.map((accommodation) => (
-                // méthode "map" pour itérer à travers le tableau "accommodations"
+                // méthode "map" pour itérer à travers le tableau "accommodations" directement dans le code jsx
             <Card key={accommodation.id} accommodation={accommodation} />
             // "key" est une propriété spéciale qui permet à React d'identifier chaque instance de la composante "Card" dans le tableau
             //accommodation -> permet à la fonction Card d'accéder aux données spécifiques d'une "accommodation"
@@ -34,7 +33,6 @@ const Home = () => {
 
         </div>
         </main>
-
         <h1>Acceuil</h1>
     </div>
     );
