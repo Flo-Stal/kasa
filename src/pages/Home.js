@@ -1,6 +1,5 @@
 import React from "react";
 import Banner from "../components/Banner";
-import BannerImg from "../assets/IMG.jpg";
 import accommodationsList from "../datas/accommodationList.json"; 
 //importe le fichier JSON qui contient les infos des différentes accommodations
 import Card from "../components/Card";
@@ -19,7 +18,6 @@ const Home = () => {
     return (
     <div>
         <Banner
-        BannerImg={BannerImg}
         BannerTitle="Chez vous, partout et ailleurs"
         />
         <main>
