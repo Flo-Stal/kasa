@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import Collapse from "../components/Collapse";
 import { Navigate } from "react-router-dom";
 import Rating from "../components/Rating";
+import Carroussel from "../components/Carroussel";
 
 const AccommodationSheet = () => {
 
@@ -25,7 +26,7 @@ const AccommodationSheet = () => {
         {/* Ce bout de code vérifie si la variable 'accommodation' est définie ou non. Si elle n'est pas définie, alors la fonction Navigate redirige l'utilisateur vers la page d'erreur "/ErrorPage". Si elle est définie, alors un nouveau composant 'div' est créé, dont la clé est définie par l'id de l'élément récupéré. */}
             <main>
             <div className="wrapper">
-                
+            <Carroussel />
 
                 <section className="accommodationLocation">
                 <div className="allAccommodationTitle">

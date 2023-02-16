@@ -31,7 +31,6 @@ const Home = () => {
 
         </div>
         </main>
-        <h1>Acceuil</h1>
     </div>
     );
 };
