@@ -14,7 +14,6 @@ const About = () => {
                 <section className="collapseAboutPage">
                     <div className="wrapper collapseWidthAbout">
                         <Collapse
-                            className="collapse_content_accommodation"
                             collapseTitle="Fiabilité"
                             collapseInfo="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes."
                         />

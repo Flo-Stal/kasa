@@ -26,7 +26,7 @@ const AccommodationSheet = () => {
         {/* Ce bout de code vérifie si la variable 'accommodation' est définie ou non. Si elle n'est pas définie, alors la fonction Navigate redirige l'utilisateur vers la page d'erreur "/ErrorPage". Si elle est définie, alors un nouveau composant 'div' est créé, dont la clé est définie par l'id de l'élément récupéré. */}
             <main>
             <div className="wrapper">
-            <Carroussel />
+            <Carroussel pictures={accommodation.pictures} />
 
                 <section className="accommodationLocation">
                 <div className="allAccommodationTitle">
@@ -64,8 +64,8 @@ const AccommodationSheet = () => {
                     <Collapse
                     collapseTitle="Equipements"
                     collapseInfo={accommodation.equipments.map(
-                        (accommodationsEquipments) => (
-                        <li key={accommodationsEquipments}>
+                        (accommodationsEquipments, index) => (
+                        <li key={index}>
                             {accommodationsEquipments}
                         </li>
                         )
