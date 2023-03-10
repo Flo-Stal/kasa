@@ -6,10 +6,7 @@ import Collapse from "../components/Collapse";
 const About = () => {
     return (
         <div>
-            <Banner 
-            BannerImg={BannerAboutImg}
-            pageName="about"
-            />
+            <Banner BannerImg={BannerAboutImg} pageName="about" />
             <main>
                 <section className="collapseAboutPage">
                     <div className="wrapper collapseWidthAbout">

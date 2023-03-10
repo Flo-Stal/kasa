@@ -1,37 +1,31 @@
 import React from "react";
 import Banner from "../components/Banner";
-import accommodationsList from "../datas/accommodationList.json"; 
-//importe le fichier JSON qui contient les infos des différentes accommodations
+import accommodationsList from "../datas/accommodationList.json";
 import Card from "../components/Card";
 import { useEffect, useState } from "react";
-//importe les fonctions useEffect et useState pour pouvoir utiliser le state
-
 
 const Home = () => {
+    // creation du state en tableau vide
     const [accommodations, setAccommodations] = useState([]);
-    // déclaration d'un state qui contient les informations des différentes accommodations
 
+    // stock dans le state les accommodations
     useEffect(() => {
         setAccommodations(accommodationsList);
     }, []);
-    // utilise useEffect pour mettre à jour le state lorsque le composant Home est appelé
     return (
-    <div>
-        <Banner
-        BannerTitle="Chez vous, partout et ailleurs"
-        />
-        <main>
-        <div className="wrapper card">
-            {accommodations.map((accommodation) => (
-                // méthode "map" pour itérer à travers le tableau "accommodations" directement dans le code jsx
-            <Card key={accommodation.id} accommodation={accommodation} />
-            // "key" est une propriété spéciale qui permet à React d'identifier chaque instance de la composante "Card" dans le tableau
-            //accommodation -> permet à la fonction Card d'accéder aux données spécifiques d'une "accommodation"
-            ))}
-
+        <div>
+            <Banner BannerTitle="Chez vous, partout et ailleurs" />
+            <main>
+                <div className="wrapper card">
+                    {accommodations.map((accommodation) => (
+                        <Card
+                            key={accommodation.id}
+                            accommodation={accommodation}
+                        />
+                    ))}
+                </div>
+            </main>
         </div>
-        </main>
-    </div>
     );
 };
 
